@@ -1,4 +1,6 @@
-# DancingLine-Fanmade-Template Beta 1.1.0
+# DancingLine-Fanmade-Template
+
+一个使用 Unity 与 C# 编写的 Dancing Line 的饭制模板
 
 ## 更新日志
 
