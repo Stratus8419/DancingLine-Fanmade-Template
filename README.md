@@ -1,4 +1,16 @@
-# DancingLine-Fanmade-Template
+# DancingLine-Fanmade-Template Beta 1.1.0
+
 ## 更新日志
-### 2022.3.23
-新增 Main Line 的操作及摄像机跟随
+
+### Beta 1.1.0
+
+2022.3.24
+
+- 新增 Wall 及撞墙判定
+- 修复了 Main Line 出发及落地时生成的第一条线尾在此后首次转弯时突起的问题
+
+### Beta 1.0.0
+
+2022.3.23
+
+- 新增 Main Line 的操作及摄像机跟随
