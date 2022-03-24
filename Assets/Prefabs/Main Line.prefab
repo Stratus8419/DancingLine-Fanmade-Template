@@ -224,9 +224,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab8f17fee6ff25d4cae7baea4ed30d27, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  CameraBind: {fileID: 0}
+  CameraFollowingExtent: 25
+  CameraBindEulerAngles: {x: 35, y: 30, z: 0}
+  CameraBindPosition: {x: 0, y: 0, z: 0}
+  CameraFollow: 0
+  FollowingNeedtime: 0
   Speed: 15
   Song: {fileID: -925666819418352672}
+  LineRigidbody: {fileID: 1648172165446883334}
   TurnAround1: {x: 0, y: 90, z: 0}
   TurnAround2: {x: 0, y: 0, z: 0}
   TurnToTA1: 1
   LineTail: {fileID: 7949316373500472587, guid: ca82ad625efd3c344ac8a00881d6b856, type: 3}
+  Invincible: 0
+  DieAudioN: {fileID: 8300000, guid: 65888078077923b4697e1cb54fb14a60, type: 3}
+  DieEffect: {fileID: 532258897790114022, guid: 250d40c5b94d266429f29e0e2f339b70, type: 3}
