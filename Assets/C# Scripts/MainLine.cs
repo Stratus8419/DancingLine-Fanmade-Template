@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
-namespace MainLine
+namespace Line
 {
     public class MainLine : MonoBehaviour
     {
@@ -29,11 +29,14 @@ namespace MainLine
         public AudioClip DieAudioN;
         public GameObject DieEffect;
 
+        public Material LineMaterial;
+        public Color LevelLineColor = Color.white;
+
         private bool nowPlaying = false;
         private bool isOver = false;
 
 
-        void TurnBlock()
+        public void TurnBlock()
         {
             if(TurnToTA1)
             {
@@ -53,7 +56,7 @@ namespace MainLine
             return Physics.Raycast(transform.position, Vector3.down, transform.localScale.y / 2 + 0.1f);
         }
 
-        bool Click()
+        public bool Click()
         {
             return (Input.GetMouseButtonDown(0) || Input.GetKeyDown(KeyCode.Space));
         }
@@ -76,6 +79,8 @@ namespace MainLine
 
             CameraBind.transform.eulerAngles = CameraBindEulerAngles;
             CameraBind.transform.localScale = new Vector3(CameraFollowingExtent, CameraFollowingExtent, CameraFollowingExtent);
+
+            LineMaterial.color = LevelLineColor;
         }
 
         //Update函数每帧调用一次
@@ -115,7 +120,7 @@ namespace MainLine
                     CameraBind.transform.DOMove(transform.position + CameraBindPosition, FollowingNeedtime);
                 }
             }
-            else if(Click())
+            else if(Click() && !isOver)
             {
                 nowPlaying = true;
                 nowTail = Instantiate(LineTail, transform.position, transform.rotation);
