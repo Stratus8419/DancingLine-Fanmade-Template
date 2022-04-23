@@ -7,10 +7,10 @@ namespace Line
 {
     public class MainLine : MonoBehaviour
     {
-        public GameObject CameraBind;
+        public GameObject CameraArm;
         public float CameraFollowingExtent = 25.0f;
-        public Vector3 CameraBindEulerAngles = new Vector3(35, 30, 0);
-        public Vector3 CameraBindPosition = Vector3.zero;
+        public Vector3 CameraArmEulerAngles = new Vector3(35, 30, 0);
+        public Vector3 CameraArmPosition = Vector3.zero;
         public bool CameraFollow;
         public float FollowingNeedtime;
 
@@ -77,8 +77,8 @@ namespace Line
                 transform.localEulerAngles = TurnAround2;
             }
 
-            CameraBind.transform.eulerAngles = CameraBindEulerAngles;
-            CameraBind.transform.localScale = new Vector3(CameraFollowingExtent, CameraFollowingExtent, CameraFollowingExtent);
+            CameraArm.transform.eulerAngles = CameraArmEulerAngles;
+            CameraArm.transform.localScale = new Vector3(CameraFollowingExtent, CameraFollowingExtent, CameraFollowingExtent);
 
             LineMaterial.color = LevelLineColor;
         }
@@ -117,7 +117,7 @@ namespace Line
 
                 if(CameraFollow)
                 {
-                    CameraBind.transform.DOMove(transform.position + CameraBindPosition, FollowingNeedtime);
+                    CameraArm.transform.DOMove(transform.position + CameraArmPosition, FollowingNeedtime);
                 }
             }
             else if(Click() && !isOver)
